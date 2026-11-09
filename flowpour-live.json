@@ -1,0 +1,16 @@
+{
+  "entries": [
+    { "key": "econ_reward_mult", "value": "1.0" },
+    { "key": "daily_enabled", "value": "true" },
+
+    { "key": "event_text", "value": "" },
+    { "key": "event_start", "value": "" },
+    { "key": "event_end", "value": "" },
+    { "key": "event_coin_mult", "value": "1" },
+
+    { "key": "latest_version", "value": "1.0.0" },
+    { "key": "min_version", "value": "1.0.0" },
+
+    { "key": "maintenance_mode", "value": "false" }
+  ]
+}
