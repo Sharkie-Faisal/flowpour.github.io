@@ -5,7 +5,7 @@
 
     { "key": "event_text", "value": "" },
     { "key": "event_start", "value": "" },
-    { "key": "event_end", "value": "" },
+    { "key": "event_end", "value": "2026-12-22T00:00:00Z" },
     { "key": "event_coin_mult", "value": "1" },
 
     { "key": "latest_version", "value": "1.0.0" },
