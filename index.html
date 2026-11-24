@@ -3,27 +3,165 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FlowPour</title>
-  <meta name="description" content="FlowPour - a relaxing color flow puzzle game by Ideonix Studios.">
+  <title>FlowPour - Tap. Pour. Relax.</title>
+  <meta name="description" content="FlowPour is a relaxing color-flow puzzle game for Android by Ideonix Studios. Release streams of color and guide them into matching jars.">
+  <meta property="og:title" content="FlowPour - Tap. Pour. Relax.">
+  <meta property="og:description" content="A calm color-flow puzzle. Guide every stream into its own jar.">
+  <meta property="og:image" content="assets/shots/home.jpg">
+  <meta name="theme-color" content="#eef0ff">
   <link rel="icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<main>
-  <header>
-    <img class="logo" src="assets/logo.png" alt="FlowPour logo">
-  </header>
-  <section class="card">
-    <h1>Tap. Pour. Relax.</h1>
-    <p>FlowPour is a soothing color-flow puzzle. Tap a reservoir and watch the stream wind along the tracks;
-      every color must reach its own jar, so the order of your pours is the puzzle.</p>
-    <nav>
+<body class="home">
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="brand">
+        <img class="brand-logo" src="assets/logo.png" alt="FlowPour" width="720" height="164">
+      </div>
+      <p class="tagline">Tap. Pour. Relax.</p>
+      <p class="lede">A calm color-flow puzzle. Release streams of color, guide them through junctions and gates,
+        and fill every jar in as few pours as you can.</p>
+      <div class="cta">
+        <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.IdeonixStudios.flowpour">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M4.5 2.6c-.3.3-.5.8-.5 1.4v16c0 .6.2 1.1.5 1.4l9.1-9.4-9.1-9.4zm10.4 10.8-2.3 2.4-7.2 7.4c.4.1.9 0 1.4-.3l9.6-5.6-1.5-3.9zm4.6-2.7-2.9-1.7-2.5 2.6 2.5 2.6 2.9-1.7c1.1-.6 1.1-1.2 0-1.8zM6.8 1.1c-.5-.3-1-.4-1.4-.3l7.2 7.4 2.3 2.4 1.5-1.6-9.6-7.9z"/></svg>
+          <span><small>Get it on</small>Google Play</span>
+        </a>
+        <span class="cta-note">Free to play · Android</span>
+      </div>
+      <a class="event-chip" href="#event" data-ends="2026-12-22T00:00:00Z">
+        <span class="dot" aria-hidden="true"></span> Lantern Festival is live: night levels and rewards
+      </a>
+    </div>
+    <div class="hero-phone">
+      <img src="assets/shots/play.jpg" alt="A FlowPour level: four colored reservoirs, junction arrows and matching jars" width="540" height="1110">
+    </div>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 70 C 240 20, 480 120, 720 70 S 1200 20, 1440 70" fill="none" stroke="#ff7a8a" stroke-width="10" stroke-linecap="round"/>
+    <path d="M0 92 C 240 42, 480 142, 720 92 S 1200 42, 1440 92" fill="none" stroke="#5aa8f0" stroke-width="10" stroke-linecap="round"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <h2 class="section-title">How to play</h2>
+    <ol class="steps">
+      <li>
+        <span class="step-num">1</span>
+        <h3>Tap a reservoir</h3>
+        <p>A stream of color pours out and flows along the tracks in real time.</p>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <h3>Plan the order</h3>
+        <p>Junctions switch after every pour, so the order you pour in decides where each color goes.</p>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <h3>Fill every jar</h3>
+        <p>Each color must reach its own jar. Use fewer pours to earn all three stars.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">See it in action</h2>
+    <div class="shots" tabindex="0" aria-label="Screenshots">
+      <figure><img src="assets/shots/home.jpg" alt="Home screen" loading="lazy" width="540" height="1110"><figcaption>Calm, colorful home</figcaption></figure>
+      <figure><img src="assets/shots/play.jpg" alt="A level in progress" loading="lazy" width="540" height="1110"><figcaption>Route every stream</figcaption></figure>
+      <figure><img src="assets/shots/win.jpg" alt="Level complete with three stars" loading="lazy" width="540" height="1050"><figcaption>Earn three stars</figcaption></figure>
+      <figure><img src="assets/shots/map.jpg" alt="Chapter level map" loading="lazy" width="540" height="1110"><figcaption>Chapter after chapter</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Why players love it</h2>
+    <div class="features">
+      <article class="feature">
+        <span class="feat-icon" style="--c:#3cb58e"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></span>
+        <h3>Relaxing by design</h3>
+        <p>No timers and unlimited retries. Take each puzzle at your own pace.</p>
+      </article>
+      <article class="feature">
+        <span class="feat-icon" style="--c:#5aa8f0"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></span>
+        <h3>Daily Puzzle</h3>
+        <p>A fresh puzzle every day. Solve it to grow your streak and earn bonus coins.</p>
+      </article>
+      <article class="feature">
+        <span class="feat-icon" style="--c:#f3b33d"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.8.9.9 1.6V16h5.2v-.5c.1-.7.4-1.2.9-1.6A6 6 0 0 0 12 3z"/></svg></span>
+        <h3>Helpful power-ups</h3>
+        <p>Stuck? Undo a pour, get a hint, or refill a reservoir and keep flowing.</p>
+      </article>
+      <article class="feature">
+        <span class="feat-icon" style="--c:#d6543c"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v3M9 5h6M8 8h8a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2zM12 18v3"/></svg></span>
+        <h3>Seasonal events</h3>
+        <p>Limited-time festivals with special levels, glowing rewards and cosmetics.</p>
+      </article>
+      <article class="feature">
+        <span class="feat-icon" style="--c:#8b6cf0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a5 5 0 0 1-.6-10 6 6 0 0 1 11.4 1.6A4.2 4.2 0 0 1 17 18z"/></svg></span>
+        <h3>Cloud save</h3>
+        <p>Progress is saved to your Google Play Games account, so a new phone picks up where you left off.</p>
+      </article>
+      <article class="feature">
+        <span class="feat-icon" style="--c:#ff7a8a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V5a2 2 0 0 1 4 0v5l4.3.9a2 2 0 0 1 1.6 2.2l-.6 4.4A3 3 0 0 1 15.3 20H11a3 3 0 0 1-2.4-1.2L5.5 14.6a1.6 1.6 0 0 1 2.3-2.2z"/></svg></span>
+        <h3>One-finger play</h3>
+        <p>Every move is a single tap. Perfect for a quick break or a long, calm session.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section event" id="event" data-ends="2026-12-22T00:00:00Z">
+    <div class="event-card">
+      <div>
+        <p class="event-kicker">Limited-time event</p>
+        <h2>Lantern Festival</h2>
+        <p>Seven nights of special night levels unlock one by one. Light the lanterns, collect Glow, and walk the festival
+          path to unlock coins, power-ups, a night backdrop and the rare Firefly stream.</p>
+      </div>
+      <svg class="event-art" viewBox="0 0 120 160" aria-hidden="true">
+        <line x1="60" y1="0" x2="60" y2="22" stroke="#f6c66b" stroke-width="4"/>
+        <rect x="42" y="20" width="36" height="10" rx="4" fill="#b23a2a"/>
+        <ellipse cx="60" cy="78" rx="44" ry="50" fill="#e8553d"/>
+        <ellipse cx="60" cy="78" rx="30" ry="50" fill="#f07a4a"/>
+        <ellipse cx="60" cy="78" rx="12" ry="50" fill="#ffb35c"/>
+        <rect x="42" y="124" width="36" height="10" rx="4" fill="#b23a2a"/>
+        <line x1="60" y1="134" x2="60" y2="156" stroke="#f6c66b" stroke-width="4"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="section closing">
+    <h2>Ready to pour?</h2>
+    <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.IdeonixStudios.flowpour">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M4.5 2.6c-.3.3-.5.8-.5 1.4v16c0 .6.2 1.1.5 1.4l9.1-9.4-9.1-9.4zm10.4 10.8-2.3 2.4-7.2 7.4c.4.1.9 0 1.4-.3l9.6-5.6-1.5-3.9zm4.6-2.7-2.9-1.7-2.5 2.6 2.5 2.6 2.9-1.7c1.1-.6 1.1-1.2 0-1.8zM6.8 1.1c-.5-.3-1-.4-1.4-.3l7.2 7.4 2.3 2.4 1.5-1.6-9.6-7.9z"/></svg>
+      <span><small>Get it on</small>Google Play</span>
+    </a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="footer-links">
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms of Service</a>
       <a href="mailto:IdeonixStudios@gmail.com">Contact support</a>
     </nav>
-  </section>
-  <footer class="muted">&copy; 2026 Ideonix Studios</footer>
-</main>
+    <p>&copy; 2026 Ideonix Studios. Google Play is a trademark of Google LLC.</p>
+  </div>
+</footer>
+
+<script>
+  // hide event promos once the festival has ended
+  document.querySelectorAll('[data-ends]').forEach(function (el) {
+    if (Date.now() >= Date.parse(el.getAttribute('data-ends'))) el.hidden = true;
+  });
+</script>
 </body>
 </html>
