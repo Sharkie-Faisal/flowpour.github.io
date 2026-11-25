@@ -33,8 +33,9 @@
         </a>
         <span class="cta-note">Free to play · Android</span>
       </div>
-      <a class="event-chip" href="#event" data-ends="2026-12-22T00:00:00Z">
-        <span class="dot" aria-hidden="true"></span> Lantern Festival is live: night levels and rewards
+      <a class="event-chip" href="#event" data-starts="2026-11-30T00:00:00Z" data-ends="2026-12-30T00:00:00Z">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="chip-text" data-soon="Lantern Festival starts 30 November">Lantern Festival is live: night levels and rewards</span>
       </a>
     </div>
     <div class="hero-phone">
@@ -116,13 +117,13 @@
     </div>
   </section>
 
-  <section class="section event" id="event" data-ends="2026-12-22T00:00:00Z">
+  <section class="section event" id="event" data-ends="2026-12-30T00:00:00Z">
     <div class="event-card">
       <div>
-        <p class="event-kicker">Limited-time event</p>
+        <p class="event-kicker">Limited-time event · 30 Nov to 30 Dec</p>
         <h2>Lantern Festival</h2>
-        <p>Seven nights of special night levels unlock one by one. Light the lanterns, collect Glow, and walk the festival
-          path to unlock coins, power-ups, a night backdrop and the rare Firefly stream.</p>
+        <p>A new night of special levels opens every few days, seven nights in all. Light the lanterns, collect Glow,
+          and walk the festival path to unlock coins, power-ups, a night backdrop and the rare Firefly stream.</p>
       </div>
       <svg class="event-art" viewBox="0 0 120 160" aria-hidden="true">
         <line x1="60" y1="0" x2="60" y2="22" stroke="#f6c66b" stroke-width="4"/>
@@ -158,9 +159,16 @@
 </footer>
 
 <script>
-  // hide event promos once the festival has ended
+  // event promos: "starts ..." before the festival, "is live" during it, hidden once it has ended
+  var now = Date.now();
   document.querySelectorAll('[data-ends]').forEach(function (el) {
-    if (Date.now() >= Date.parse(el.getAttribute('data-ends'))) el.hidden = true;
+    if (now >= Date.parse(el.getAttribute('data-ends'))) { el.hidden = true; return; }
+    var starts = el.getAttribute('data-starts');
+    if (starts && now < Date.parse(starts)) {
+      el.classList.add('soon');
+      var t = el.querySelector('[data-soon]');
+      if (t) t.textContent = t.getAttribute('data-soon');
+    }
   });
 </script>
 </body>

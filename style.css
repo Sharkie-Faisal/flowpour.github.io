@@ -111,6 +111,8 @@ body.home h1, body.home h2, body.home h3, body.home .tagline, body.home .play-bt
   color: var(--festival); background: rgba(214, 84, 60, 0.1); border: 1px solid rgba(214, 84, 60, 0.25);
 }
 .event-chip .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--festival); animation: pulse 1.8s ease-in-out infinite; }
+.event-chip.soon .dot { animation: none; background: #e39a12; }
+.event-chip.soon { color: #a8670a; background: rgba(227, 154, 18, 0.12); border-color: rgba(227, 154, 18, 0.3); }
 @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(214, 84, 60, 0.5); } 50% { box-shadow: 0 0 0 7px rgba(214, 84, 60, 0); } }
 .hero-phone { justify-self: center; animation: float 6s ease-in-out infinite; }
 .hero-phone img, .shots img {
